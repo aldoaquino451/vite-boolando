@@ -1,0 +1,18 @@
+
+/* Gestione del gap */
+
+.gap{
+  &-5{
+    gap: 5px;
+  }
+  &-10{
+    gap: 10px;
+  }
+  &-20{
+    gap: 20px;
+  }
+  &-50{
+    gap: 50px;
+  }
+}
+
