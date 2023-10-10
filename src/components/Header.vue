@@ -2,7 +2,34 @@
 
 export default {
   name: 'Header',
-
+  data() {
+    return {
+      menuLeft: [
+        {
+          link: '#',
+          text: 'Donna'
+        }, {
+          link: '#',
+          text: 'Uomo'
+        }, {
+          link: '#',
+          text: 'Bmabini'
+        },
+      ],
+      menuRight: [
+        {
+          link: '#',
+          icon: 'fa-regular fa-user'
+        }, {
+          link: '#',
+          icon: 'fa-regular fa-heart'
+        }, {
+          link: '#',
+          icon: 'fa-solid fa-bag-shopping'
+        }
+      ]
+    }
+  }
 }
 
 </script>
@@ -14,9 +41,13 @@ export default {
 
       <nav>
         <ul>
-          <li>icona</li>
-          <li>icona</li>
-          <li>icona</li>
+          <li 
+          v-for="(item, index) in menuLeft" :key="index"
+          >
+            <a :href="item.link">
+              {{ item.text }}
+            </a>
+          </li>
         </ul>
       </nav>
       
@@ -26,9 +57,13 @@ export default {
       
       <nav>
         <ul>
-          <li>icona</li>
-          <li>icona</li>
-          <li>icona</li>
+          <li 
+          v-for="(item, index) in menuRight" :key="index"
+          >
+            <a :href="item.link">
+              <i :class="item.icon"></i>
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -48,13 +83,15 @@ header {
   .container {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     ul {
       height: 100%;
       list-style: none;
       display: flex;
       align-items: center;
       gap: 10px;
-      li {
+      a {
+        text-decoration: none;
         color: $text-h-f-color;
       }
     }
