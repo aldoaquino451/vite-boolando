@@ -1,81 +1,55 @@
 <script>
+import products from '../data/products'
+import Card from './Card.vue';
 
 export default {
   name: 'Main',
+  components: {
+    Card
+  },
+
   data() {
     return {
-      cards: [
-        {
-          imgFirst: '1.webp',
-          imgSecond: '1b.webp',
-          imgName: 'levi\'s',
-          discount: '-40%',
-          eco: 'sostenibilità',
-          productBrand: 'Levi\'s',
-          productName: 'Relaxed fit tee Unisex',
-          productPrice: '29,99',
-          productDiscounted: '14,99'
-        }
-      ]
+      products
     }
-  }
+  },
 }
 
 </script>
 
 <template>
 
-  <main>
-    <div class="container-sm">
-      <div class="cards">
+<main>
+  <div class="container-sm">
+    <div class="cards">
 
-        <div class="card">
-
-          <div class="card-image">
-            <img src="../assets/img/1.webp" alt="levi's">
-            <img src="./img/1.webp" alt="levi's">
-            <div class="card-image-heart">
-              <span class="heart"><i class="fa-solid fa-heart"></i></span>
-              <span class="heart"><i class="fa-regular fa-heart"></i></span>
-            </div>
-            <div class="card-image-content">
-              <span>-50%</span>
-              <span>Sostenibilità</span>
-            </div>
-          </div>
-
-          <div class="card-product">
-            <p class="product-brand">Levi's</p>
-            <p class="product-name"><b>Relaxed fit tee Unisex</b></p>
-            <p class="product-price"><b>14,99 &euro;</b> <span>29,99 &euro;</span></p>
-          </div>
-
-        </div>
-
-      </div>
+      <Card 
+        v-for="product in products"
+        :key="product.id"
+        :firstImage="product.imageMain" 
+        :secondImage="product.imageAltern" 
+        :discount="product.discount" 
+        :eco="product.eco" 
+        :brand="product.brand" 
+        :type="product.type" 
+        :firstPrice="product.price" 
+        :lastPrice="product.priceDisc" 
+      />
+    
     </div>
-  </main>
-  
+  </div>
+</main>
+
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-@use '../scss/partials/variabiles' as *;
-
-main {
-  .cards {
-    margin: 50px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    .card {
-      width: 250px;
-      img {
-        width: 100%;
-      }
-    }
-  }
+.cards {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
 </style>

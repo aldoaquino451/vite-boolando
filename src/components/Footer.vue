@@ -82,14 +82,14 @@ export default {
   
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 @use '../scss/partials/variabiles' as *;
 
 footer {
   background-color: $footer-color;
   color: $text-h-f-color;
-  font-size: 14px;
+  font-size: 0.8rem;
   padding: 20px 0;
   .container {
     display: flex;
@@ -100,7 +100,7 @@ footer {
     ul {
       list-style: none;
       display: flex;
-      gap: 10px;
+      gap: 15px;
       a { 
         text-decoration: none;
         color: $text-h-f-color;

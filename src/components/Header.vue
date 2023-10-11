@@ -13,7 +13,7 @@ export default {
           text: 'Uomo'
         }, {
           link: '#',
-          text: 'Bmabini'
+          text: 'Bambini'
         },
       ],
       menuRight: [
@@ -89,7 +89,7 @@ header {
       list-style: none;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
       a {
         text-decoration: none;
         color: $text-h-f-color;
