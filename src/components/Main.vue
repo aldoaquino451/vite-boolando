@@ -52,11 +52,6 @@ export default {
 
         </div>
 
-        <div class="card">card</div>  
-        <div class="card">card</div>  
-        <div class="card">card</div>  
-        <div class="card">card</div>  
-        <div class="card">card</div>  
       </div>
     </div>
   </main>
@@ -76,8 +71,9 @@ main {
     gap: 15px;
     .card {
       width: 250px;
-      min-height: 200px;
-      border: 1px solid black;
+      img {
+        width: 100%;
+      }
     }
   }
 }

@@ -7,16 +7,17 @@ export default {
       menuLeft: {
         title: 'Boolando s.r.l.',
         links: [
-        {
-          link: '#',
-          text: 'Informazioni legali'
-        }, {
-          link: '#',
-          text: 'Informativa sulla privacy'
-        }, {
-          link: '#',
-          text: 'Diritto di recesso'
-        }],
+          {
+            link: '#',
+            text: 'Informazioni legali'
+          }, {
+            link: '#',
+            text: 'Informativa sulla privacy'
+          }, {
+            link: '#',
+            text: 'Diritto di recesso'
+          }
+        ],
       },
       menuRight: {
         title: 'Trovaci anche su',
